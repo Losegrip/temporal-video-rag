@@ -1,0 +1,122 @@
+[
+  {
+    "query": "在处理出血伤者时，为什么不能随意取出伤口中的异物？",
+    "gt_video": "blood",
+    "gt_start": 30.2,
+    "gt_end": 34.2
+  },
+  {
+    "query": "如果伤者无法自己按压出血部位，救援者应该如何处理？",
+    "gt_video": "blood",
+    "gt_start": 42.2,
+    "gt_end": 61.5
+  },
+  {
+    "query": "在救援出血伤者前，为什么要迅速戴上手套或使用干净的布压住？",
+    "gt_video": "blood",
+    "gt_start": 18.3,
+    "gt_end": 22.2
+  },
+  {
+    "query": "当需要离开伤者去呼叫救援中心时，应该要求伤者自己怎么做？",
+    "gt_video": "blood",
+    "gt_start": 37.8,
+    "gt_end": 42.2
+  },
+  {
+    "query": "在急救的最后阶段，呼叫救援后直到救援来到之前，应该对伤者做什么？",
+    "gt_video": "blood",
+    "gt_start": 65.1,
+    "gt_end": 67.9
+  },
+  {
+    "query": "用于发出SOS求救信号的应急包里，应该准备哪些物品？",
+    "gt_video": "FIRST AID KIT",
+    "gt_start": 23.3,
+    "gt_end": 51.3
+  },
+  {
+    "query": "在应急生存包中，准备医生的空瓶子和净水片有什么用途？",
+    "gt_video": "FIRST AID KIT",
+    "gt_start": 73.3,
+    "gt_end": 100.3
+  },
+  {
+    "query": "如果在灾难中饮水不够充足，为什么最好不要进食？",
+    "gt_video": "FIRST AID KIT",
+    "gt_start": 111.3,
+    "gt_end": 120.3
+  },
+  {
+    "query": "在家庭环境中，建议放置多少升的装水容器来提供清洁用水？",
+    "gt_video": "FIRST AID KIT",
+    "gt_start": 121.3,
+    "gt_end": 128.3
+  },
+  {
+    "query": "准备应急包时，身份证、保险证明等重要文件应该放在哪里？",
+    "gt_video": "FIRST AID KIT",
+    "gt_start": 131.3,
+    "gt_end": 153.3
+  },
+  {
+    "query": "应急包中准备美工刀和瑞士军刀主要用来做什么？",
+    "gt_video": "FIRST AID KIT",
+    "gt_start": 131.3,
+    "gt_end": 153.3
+  },
+  {
+    "query": "朱温废掉唐朝末代皇帝后建立的政权叫什么？",
+    "gt_video": "history",
+    "gt_start": 253.0,
+    "gt_end": 256.4
+  },
+  {
+    "query": "石敬瑭向契丹借兵后付出的代价是割让了哪块地区？",
+    "gt_video": "history",
+    "gt_start": 569.3,
+    "gt_end": 573.8
+  },
+  {
+    "query": "吴权自立为王导致自秦朝以来的哪块地区脱离中华帝国？",
+    "gt_video": "history",
+    "gt_start": 629.2,
+    "gt_end": 633.3
+  },
+  {
+    "query": "五代十国这段历史前后一共持续了多少年？",
+    "gt_video": "history",
+    "gt_start": 938.0,
+    "gt_end": 941.8
+  },
+  {
+    "query": "五代十国最终是在什么时候、被谁彻底终结的？",
+    "gt_video": "history",
+    "gt_start": 938.0,
+    "gt_end": 941.8
+  },
+  {
+    "query": "五代十国中的“五代”的最后一代是哪个政权？由谁建立？",
+    "gt_video": "history",
+    "gt_start": 806.5,
+    "gt_end": 812.0
+  },
+  {
+    "query": "赵匡胤是在哪位后周皇帝去世后，建立宋朝的？",
+    "gt_video": "history",
+    "gt_start": 900.1,
+    "gt_end": 910.7
+  },
+  {
+    "query": "十国中最后建立的国家是哪个？由谁在山西建立？",
+    "gt_video": "history",
+    "gt_start": 814.0,
+    "gt_end": 821.6
+  },
+  {
+    "query": "唐朝末年，黄巢之乱平定后，唐王朝是否重新变得强大了？发生了什么？",
+    "gt_video": "history",
+    "gt_start": 33.2,
+    "gt_end": 43.1
+  }
+]

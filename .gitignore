@@ -1,0 +1,18 @@
+# 核心排除对象
+model/
+ffmpeg*/
+data/tmp/
+data/index/
+data/videos/*.mp4
+data/videos/*.mkv
+
+# Python 运行时产物
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 本地环境与 IDE
+.vscode/
+.idea/
+.env
+venv/
