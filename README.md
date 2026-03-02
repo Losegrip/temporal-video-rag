@@ -126,6 +126,6 @@ streamlit run src/web_ui.py
 
 > ![UI Screenshot Placeholder](assets/ui2.png)
 
-## 📌 免责声明
+## 📌 声明
 
 本仓库仅包含核心源代码、评测基准数据及环境配置文件。由于体积与版权限制，仓库内**不包含** FFmpeg 工具包、模型权重文件及原始视频媒体。
