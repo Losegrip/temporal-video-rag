@@ -14,34 +14,62 @@
 
 - **多阶段检索链路**：系统采用 Bi-Encoder 进行初筛召回，随后使用 Cross-Encoder (`bge-reranker-base`) 对结果进行深度语义评分与排序重排。
 
-## 📊 实验数据与指标评估
+## 📊 核心指标定义 (Evaluation Metrics)
 
-通过对比实验，系统验证了不同算法策略在多视频混合干扰场景下的性能表现。
+为确保评测的严谨性，系统采用以下指标评估检索质量：
 
-### 1. 切片策略对比 (Recall & MRR)
+- **Recall@K**: 正确答案出现在检索结果前 $K$ 名的比例。
 
-对比在不启用重排的情况下，不同 Chunking 粒度对检索精度的影响。
+- **MRR (Mean Reciprocal Rank)**: 衡量排序质量的核心指标，计算公式为：
+  
+  $$MRR = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{rank_i}$$
 
-| **策略类型 (Strategy)**       | **Recall@1** | **Recall@5** | **MRR** |
-| ------------------------- | ------------ | ------------ | ------- |
-| **Single (原始切片)**         | 55.0%        | 90.0%        | 0.685   |
-| **Merge (定长合并)**          | 85.0%        | 100.0%       | 0.904   |
-| **Sliding Window (滑动窗口)** | 75.0%        | 95.0%        | 0.842   |
+---
 
-> **实验跑图记录：** > ![Chunking Strategy Results](assets/test1.png)
+#### 1. 切片策略性能对比 (Chunking Strategy Benchmark)
 
-### 2. Rerank 性能提升验证
+针对多视频混合干扰场景，对比了不同分块粒度对语义检索鲁棒性的影响。
 
-在多视频混合的知识库中，测试两阶段检索链路相对于基础向量检索的增益。
+| **策略类型 (Strategy)** | **Recall@1** | **Recall@5** | **MRR**   | **核心特征 (Key Logic)** |
+| ------------------- | ------------ | ------------ | --------- | -------------------- |
+| **Single**          | 55.0%        | 90.0%        | 0.685     | 原始分片，粒度最细但语义支离破碎     |
+| **Merge**           | **85.0%**    | **100.0%**   | **0.904** | 定长合并，上下文背景最丰富        |
+| **Sliding Window**  | 75.0%        | 95.0%        | 0.842     | 步长重叠，兼顾定位精度与语义关联     |
 
-| **检索架构 (Architecture)**  | **Recall@1** | **Recall@5** | **MRR**   |
-| ------------------------ | ------------ | ------------ | --------- |
-| **Base (纯向量检索)**         | 75.0%        | 95.0%        | 0.842     |
-| **BGE Reranker (召回+重排)** | **90.0%**    | **100.0%**   | **0.938** |
+<details>
 
-> **实验跑图记录：** > ![Rerank Performance Improvement](assets/test2.png)
+<summary>📸 点击查看实验终端跑图原始证据 (Raw Terminal Log)</summary>
 
-- **指标解释**：MRR (Mean Reciprocal Rank) 反映了正确答案在返回列表中的平均名次倒数，体现了系统的排序能力。
+<p align="center">
+
+<img title="" src="assets/test1.png" alt="" width="650">
+
+</p>
+
+</details>
+
+---
+
+#### 2. Rerank 性能增益验证 (Reranking Performance Lift)
+
+在混合 3 个视频的复杂干扰池中，验证 BGE-Reranker 对排序精度的二次优化效果。
+
+| **检索架构 (Architecture)**       | **Recall@1** | **MRR**   | **增益 (Lift)**                    |
+| ----------------------------- | ------------ | --------- | -------------------------------- |
+| **Base (Bi-Encoder)**         | 75.0%        | 0.842     | 基准线                              |
+| **BGE Reranker (Re-ranking)** | **90.0%**    | **0.938** | **+15.0% Recall@1 / +11.4% MRR** |
+
+<details>
+
+<summary>📸 点击查看实验终端跑图原始证据 (Raw Terminal Log)</summary>
+
+<p align="center">
+
+<img title="" src="assets/test2.png" alt="" width="650">
+
+</p>
+
+</details>
 
 ## 📂 目录结构
 
