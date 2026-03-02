@@ -28,7 +28,7 @@
 | **Merge (定长合并)**          | 85.0%        | 100.0%       | 0.904   |
 | **Sliding Window (滑动窗口)** | 75.0%        | 95.0%        | 0.842   |
 
-> **实验跑图记录：** > ![Chunking Strategy Results](assets/7159002ff63f86269aeb1ba0f6f71e0.png)
+> **实验跑图记录：** > ![Chunking Strategy Results](assets/test1.png)
 
 ### 2. Rerank 性能提升验证
 
@@ -39,7 +39,7 @@
 | **Base (纯向量检索)**         | 75.0%        | 95.0%        | 0.842     |
 | **BGE Reranker (召回+重排)** | **90.0%**    | **100.0%**   | **0.938** |
 
-> **实验跑图记录：** > ![Rerank Performance Improvement](assets/e8d1a5d925823b3164b5a7bb3c05b31.png)
+> **实验跑图记录：** > ![Rerank Performance Improvement](assets/test2.png)
 
 - **指标解释**：MRR (Mean Reciprocal Rank) 反映了正确答案在返回列表中的平均名次倒数，体现了系统的排序能力。
 
@@ -94,9 +94,9 @@ streamlit run src/web_ui.py
 
 ### 跨视频语义溯源 系统不仅能给出回答，还能从混合知识库中准确识别视频来源（如 `blood.mp4`, `history.mp4`）并定位到具体秒数。 >
 
-> ![UI Screenshot Placeholder](assets/ui_screenshot.png) 
+> ![UI Screenshot Placeholder](assets/ui1.png) 
 
-> ![UI Screenshot Placeholder](assets/ui_screenshot.png)
+> ![UI Screenshot Placeholder](assets/ui2.png)
 
 ## 📌 免责声明
 
