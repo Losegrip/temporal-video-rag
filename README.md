@@ -28,6 +28,8 @@
 | **Merge (定长合并)**          | 85.0%        | 100.0%       | 0.904   |
 | **Sliding Window (滑动窗口)** | 75.0%        | 95.0%        | 0.842   |
 
+> **实验跑图记录：** > ![Chunking Strategy Results](assets/7159002ff63f86269aeb1ba0f6f71e0.png)
+
 ### 2. Rerank 性能提升验证
 
 在多视频混合的知识库中，测试两阶段检索链路相对于基础向量检索的增益。
@@ -37,6 +39,8 @@
 | **Base (纯向量检索)**         | 75.0%        | 95.0%        | 0.842     |
 | **BGE Reranker (召回+重排)** | **90.0%**    | **100.0%**   | **0.938** |
 
+> **实验跑图记录：** > ![Rerank Performance Improvement](assets/e8d1a5d925823b3164b5a7bb3c05b31.png)
+
 - **指标解释**：MRR (Mean Reciprocal Rank) 反映了正确答案在返回列表中的平均名次倒数，体现了系统的排序能力。
 
 ## 📂 目录结构
@@ -44,6 +48,7 @@
 Plaintext
 
 ```
+├── assets               #[Local Directory Structure](assets/image)
 ├── data/
 │   ├── videos/          # 原始视频文件目录 (.mp4)
 │   ├── eval/            # 自动化评测集与 Ground Truth
@@ -84,6 +89,14 @@ python src/main.py
 # 启动可视化分析系统
 streamlit run src/web_ui.py
 ```
+
+## 🚀 运行效果预览 (Demo)
+
+### 跨视频语义溯源 系统不仅能给出回答，还能从混合知识库中准确识别视频来源（如 `blood.mp4`, `history.mp4`）并定位到具体秒数。 >
+
+> ![UI Screenshot Placeholder](assets/ui_screenshot.png) 
+
+> ![UI Screenshot Placeholder](assets/ui_screenshot.png)
 
 ## 📌 免责声明
 
